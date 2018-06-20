@@ -4,12 +4,20 @@ class DogsController < ApplicationController
 
   # GET /organizations/:organization_id/dogs
   def index
-    json_response(@organization.dogs)
+    if params[:organization_id]
+      json_response(@organization.dogs)
+    else
+      json_response(Dog.all)
+    end
   end
 
   # GET /organizations/:organization_id/dogs/:id
   def show
-    json_response(@dog)
+    if params[:organization_id]
+      json_response(@dog)
+    else
+      json_response(Dog.find(params[:id]))
+    end
   end
 
   # POST /organizations/:organization_id/dogs
@@ -37,7 +45,7 @@ class DogsController < ApplicationController
   end
 
   def set_organization
-    @organization = Organization.find(params[:organization_id])
+    @organization = Organization.find(params[:organization_id]) if params[:organization_id]
   end
 
   def set_organization_dog

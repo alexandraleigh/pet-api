@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :organizations do
     resources :dogs
   end
+  resources :dogs, only: [:index, :show]
 end
