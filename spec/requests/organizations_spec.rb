@@ -53,7 +53,7 @@ RSpec.describe 'Organizations API', type: :request do
   # Test suite for POST /organizations
   describe 'POST /organizations' do
     # valid payload
-    let(:valid_attributes) { { name: 'Pet Rescue Name', line1: '123 Anystreet Street', city: 'Anywhere', state: 'CA', zipcode: '12345', phone: '123.456.7890' } }
+    let(:valid_attributes) { { name: 'Pet Rescue Name', line1: '123 Anystreet Street', city: 'Anywhere', state: 'CA', zipcode: '12345', phone: '123.456.7890', created_by: '1' } }
 
     context 'when the request is valid' do
       before { post '/organizations', params: valid_attributes }

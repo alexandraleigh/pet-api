@@ -34,7 +34,7 @@ class OrganizationsController < ApplicationController
 
   def organization_params
     # whitelist params
-    params.permit(:name, :line1, :line2, :city, :state, :zipcode, :phone, :website)
+    params.permit(:name, :line1, :line2, :city, :state, :zipcode, :phone, :website, :created_by)
   end
 
   def set_organization
