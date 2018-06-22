@@ -9,7 +9,7 @@ class OrganizationsController < ApplicationController
 
   # POST /organizations
   def create
-    @organization = Organization.create!(organization_params)
+    @organization = current_user.organizations.create!(organization_params)
     json_response(@organization, :created)
   end
 
@@ -34,7 +34,7 @@ class OrganizationsController < ApplicationController
 
   def organization_params
     # whitelist params
-    params.permit(:name, :line1, :line2, :city, :state, :zipcode, :phone, :website, :created_by)
+    params.permit(:name, :line1, :line2, :city, :state, :zipcode, :phone, :website)
   end
 
   def set_organization
