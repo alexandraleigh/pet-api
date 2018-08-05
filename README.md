@@ -1,5 +1,5 @@
 # Pet API
-I am passionate about rescuing pets and web developments. This is a side project I created to combine the two. It is an adoptable pet database modeled after sites like Petfinder and Adopt-a-Pet. My main goal is to learn more about creating RESTful JSON APIs with Rails 5. This is a work in progress!
+I am passionate about rescuing pets and web development. This is a side project I created that combines the two. It is an adoptable pet database modeled after sites like Petfinder and Adopt-a-Pet. My main goal is to learn more about creating RESTful JSON APIs with Rails 5. This is a work in progress!
 
 ## Installation
 
