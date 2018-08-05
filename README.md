@@ -7,6 +7,7 @@ Clone the git repository
 
 ```
 git clone https://github.com/alexandraleigh/pet-api.git
+cd pet-api
 ```
 
 Install dependencies
