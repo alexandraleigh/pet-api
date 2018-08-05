@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
 
   resources :dogs, only: [:index, :show]
+  resources :users, only: [:index, :show]
 
   post 'auth/login', to: 'authentication#authenticate'
   post 'signup', to: 'users#create'

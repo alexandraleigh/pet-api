@@ -1,6 +1,7 @@
 class DogsController < ApplicationController
   before_action :set_organization
   before_action :set_organization_dog, only: [:show, :update, :destroy]
+  skip_before_action :authorize_request, only: [:index, :show]
 
   # GET /organizations/:organization_id/dogs
   def index
