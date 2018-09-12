@@ -19,6 +19,9 @@ gem 'puma', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
+gem 'rack-cors', :require => 'rack/cors'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'will_paginate', '~> 3.1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

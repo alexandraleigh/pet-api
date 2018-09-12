@@ -24,6 +24,11 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_model_serializers (0.10.7)
+      actionpack (>= 4.1, < 6)
+      activemodel (>= 4.1, < 6)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (5.0.7)
       activesupport (= 5.0.7)
       globalid (>= 0.3.6)
@@ -42,6 +47,8 @@ GEM
     bcrypt (3.1.11)
     builder (3.2.3)
     byebug (10.0.2)
+    case_transform (0.2)
+      activesupport
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     database_cleaner (1.7.0)
@@ -59,6 +66,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    jsonapi-renderer (0.2.0)
     jwt (1.5.6)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -77,6 +85,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     puma (3.11.4)
     rack (2.0.5)
+    rack-cors (1.0.2)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.7)
@@ -145,11 +154,13 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
+    will_paginate (3.1.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers (~> 0.10.0)
   bcrypt (~> 3.1.7)
   byebug
   database_cleaner
@@ -158,6 +169,7 @@ DEPENDENCIES
   jwt
   listen (~> 3.0.5)
   puma (~> 3.0)
+  rack-cors
   rails (~> 5.0.7)
   rspec-rails (~> 3.5)
   shoulda-matchers (~> 3.1)
@@ -165,6 +177,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   tzinfo-data
+  will_paginate (~> 3.1.0)
 
 BUNDLED WITH
    1.13.6

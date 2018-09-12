@@ -34,7 +34,7 @@ End with an example of getting some data out of the system or using it for a lit
 ## Running the tests
 
 ```
-rspec 
+rspec
 ```
 
 
@@ -49,4 +49,3 @@ Add additional notes about how to deploy this on a live system
 ## Authors
 
 * **Allie Bartholomew** - *Initial work* - [alexandraleigh](https://github.com/alexandraleigh)
-

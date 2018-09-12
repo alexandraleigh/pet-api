@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :organizations do
-    resources :dogs
+  scope module: :v2, constraints: ApiVersion.new('v2') do
+    resources :organizations, only: :index
+  end
+
+  scope module: :v1, constraints: ApiVersion.new('v1', true) do
+    resources :organizations do
+      resources :dogs
+    end
   end
 
   resources :dogs, only: [:index, :show]
